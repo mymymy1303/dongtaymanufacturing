@@ -1,0 +1,17 @@
+{
+    "SETUP": {
+        "index": {
+            "header": [
+                "header/h-12"
+            ],
+            "body": [
+                "breadcrumb/b-4",
+                "map/m-2",
+                "form/f-3"
+            ],
+            "footer": [
+                "footer/f-5"
+            ]
+        }
+    }
+}
