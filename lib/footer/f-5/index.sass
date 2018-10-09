@@ -4,6 +4,43 @@
 //////////////////////////////////////
 
 .canhcam-footer-5
+	background-color: color-get($mau, main)
+	color: color-get($mau, main-light)
+	+pad(2.5rem 0)
+	+fz(.875rem)
+	+fw(400)
+	display: flex
+	align-items: center
 	.copyright
-		text-align: center
-		color: darken(color-get($mau,trang),50%)
+		p
+			margin-bottom: 0
+	.footer-nav
+		ul
+			+mar(0)
+			+fz(0)
+			li
+				+mar(0)
+				+pad(0 1rem)
+				+transform(skew(-20deg))
+				border-right: 1px solid color-get($mau, main-light)
+				&:last-child
+					border-right: 0
+					padding-right: 0
+				a
+					+transform(skew(20deg))
+					color: color-get($mau, main-light)
+					text-transform: uppercase
+					+fz(.875rem)
+					+fw(400)
+					+pad(0)
+					line-height: .875rem
+					border: 0
+					outline: none
+					+transition(.3s ease-in-out)
+					&:active, &:focus
+						color: color-get($mau, trang)
+					&:hover
+						color: color-get($mau, trang)
+						+fz(1.25rem)
+
+
