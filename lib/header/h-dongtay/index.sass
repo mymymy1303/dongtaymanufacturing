@@ -110,19 +110,38 @@
 				.nav
 					justify-content: flex-start
 					padding: 1rem 0
+					align-items: center
 					.nav-item
 						+pad(0 2rem)
 						transform: skew(-20deg)
 						border-right: color-get($mau,duong-1) 1px solid
 						&:first-child
 							padding-left: 0
-						&:last-child
+						&:last-child,&:nth-last-child(2)
 							border-right: 0
+							padding-right: 0
+						&:last-child
+							transform: none
+							padding: 0 0 0 2.5rem
 						.nav-link
 							color: color-get($mau,duong-1)
 							font-weight: 400
-							font-size: 0.938rem
+							font-size: 0.875rem
 							transform: skew(20deg)
+							line-height: 1.467
+						form
+							position: relative
+							button 
+								position: absolute
+								right: 0
+								background: transparent
+								border: 0
+								color: color-get($mau,xam-1)
+							input 
+								padding-right: 21px
+								color: color-get($mau,xam-1)
+								&::placeholder
+									color: color-get($mau,xam-1)
 						&:hover, &.active, &.show
 							.nav-link
 								color: color-get($mau,extra)
@@ -133,23 +152,7 @@
 									color: color-get($mau,trang)
 			.mainnav
 				display: flex
-				flex-direction: column
-				.searchbar
-					overflow: hidden
-					display: flex
-					height: 35px
-					+pad(0)
-					margin-top: .5rem
-					justify-content: flex-end
-					+transition(.3s all ease-in-out)
-					.input-group
-						height: 35px
-						border: 1px solid lighten(color-get($mau,den),60%)
-						width: auto
-						overflow: hidden
-						input, button
-							+pad(.25rem .5rem)
-							color: lighten(color-get($mau,den),60%)
+				flex-direction: colum
 		&.fixedheader
 			&.active
 				.topbar
@@ -157,12 +160,10 @@
 					overflow: hidden
 				.k-responsive-menu
 					.mainnav
-						.searchbar
-							height: 0px
-							margin-top: 0
-					.navbar-brand 
-						img
-							max-height: 2.5rem
+						.navbar-brand 
+							img
+								max-height: 2.5rem
+					
 	+media-breakpoint-up(xl)
 		.k-responsive-menu
 			.navbar-brand
@@ -192,3 +193,21 @@
 				.nav-item
 					font-size: 1.5rem
 					margin-bottom: 1rem
+					.form-inline
+						position: relative
+						button 
+							position: absolute
+							right: 0
+							background: transparent
+							border: 0
+							color: color-get($mau,xam-1)
+							i 
+								font-size: 1rem
+								line-height: 3rem
+						input 
+							width: 100%
+							padding-right: 21px
+							color: color-get($mau,xam-1)
+							height: 2.5rem
+							&::placeholder
+								color: color-get($mau,xam-1)

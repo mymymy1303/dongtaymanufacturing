@@ -2,7 +2,6 @@ header.dongtay-header
 	.k-menu-bar.container
 		#logo.mr-auto
 			img(src="./img/dongtay/_global/logo.png", alt="")
-		#language
 		button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
 			i.mdi.mdi-menu
 	#demoResAllInOneMenu.container-fluid.k-responsive-menu.px-0
@@ -45,6 +44,13 @@ header.dongtay-header
 										a.nav-link(href='#').p-0 Recruitment
 									li.nav-item
 										a.nav-link(href='#').p-0 Contact
+									li.nav-item
+										form.form-inline.px-0
+											button(type="submit")
+												i.fa.fa-search(aria-hidden="true")
+											input.form-control.form-control-sm(type="text" placeholder="Search" aria-label="Search")
+
+								
 					#contactinfotel
 					#contactinfo
 
