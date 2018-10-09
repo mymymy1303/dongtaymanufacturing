@@ -33,6 +33,7 @@
         ],
         "js": [
             "bower_components/owl.carousel/dist/owl.carousel.min.js",
+            "node_modules/gsap/umd/TweenMax.js",
             "bower_components/k-gmaps/dist/js/kmaps.js",
             "bower_components/bootstrap-validator/dist/validator.min.js",
             "bower_components/select2/dist/js/select2.full.min.js",
