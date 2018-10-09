@@ -215,4 +215,23 @@ header
 				&:after
 					+pos(abs, -19px 1.2rem null initial)
 
+.title-with-pattern
+	position: relative
+	+mar(0)
+	+pad(0 0 1.5rem 0)
+	+media-breakpoint-up(md)
+		+pad(0)
+		overflow: hidden
+	&:after
+		content: ''
+		+size(100%, 1rem)
+		+pos(abs, null null 0 0)
+		background: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQYV2NkQAMnT578z4gsBhIwNzdnhAvCBECKwILIAmBBdAGQIADZCRNgnQWlBwAAAABJRU5ErkJggg== ) repeat
+		+media-breakpoint-up(md)
+			bottom: initial
+			left: initial
+			top: 50%
+			+transform(translateY(-50%))
+			margin-left: 1.675rem
+
 
