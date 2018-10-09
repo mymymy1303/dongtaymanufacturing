@@ -1,0 +1,50 @@
+header.dongtay-header
+	.k-menu-bar.container
+		#logo.mr-auto
+			img(src="./img/dongtay/_global/logo.png", alt="")
+		#language
+		button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
+			i.mdi.mdi-menu
+	#demoResAllInOneMenu.container-fluid.k-responsive-menu.px-0
+		.k-menu-bar
+			button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
+				i.mdi.mdi-close
+		.nav.mainnav.w-100
+			.container-fluid.px-0
+				.col.px-0
+					.topbar.w-100.py-2
+						.container.d-flex
+							.navbar-brand.mr-auto
+								img(src="./img/dongtay/_global/logo.png", alt="")
+							ul.contactinfo(k-menu-map-to="#contactinfotel")
+								li 
+									span.link 090909090808
+							ul.contactinfo(k-menu-map-to="#contactinfo")
+								li
+									a(href='#') 
+										em.fab.fa-facebook-f
+								li
+									a(href='#') 
+										em.fab.fa-twitter
+				.col.nav-wrapper
+					.container 
+						.row 
+							.col
+								ul.nav
+									li.nav-item
+										a.nav-link(href='#').p-0 Home
+									li.nav-item
+										a.nav-link(href='#').p-0 Service
+									li.nav-item
+										a.nav-link(href='#').p-0 Facilities
+									li.nav-item
+										a.nav-link(href='#').p-0 Quality
+									li.nav-item
+										a.nav-link(href='#').p-0 Project
+									li.nav-item
+										a.nav-link(href='#').p-0 Recruitment
+									li.nav-item
+										a.nav-link(href='#').p-0 Contact
+					#contactinfotel
+					#contactinfo
+

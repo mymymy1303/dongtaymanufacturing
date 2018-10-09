@@ -1,0 +1,194 @@
+@import ../../_includes
+
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.dongtay-header
+	background: color-get($mau,trang)
+	box-shadow: 0 0 5px rgba(0,0,0,.5)
+	&.fixedheader
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 999
+		transition: all .25s ease-in-out
+		&.active , &.expand
+	.contactinfo
+		margin-bottom: 0 
+		display: flex
+		+mar(0)
+		+pad(0)
+		flex-wrap: wrap
+		li 
+			list-style: none
+			a, .link
+				color: lighten(color-get($mau,main),30%)
+				display: inline-block
+				text-decoration: none
+				+pad(0.5rem 1rem)
+			&:hover, &.active, &.show
+				a
+					color: color-get($mau,trang)
+	.searchbar
+		+pad(1rem)
+		color: lighten(color-get($mau,main),30%)
+		.input-group
+			width: 100%
+			input, button
+				+bor-rad(0)
+			button
+				background: darken(color-get($mau,trang),0%)
+				color: color-get($mau,main)
+	.k-menu-bar
+		color: color-get($mau,main)
+		.k-button-toggle
+			color: color-get($mau,main)
+		.navbar-brand
+			#logo
+				img
+					max-height: 3rem
+		.nav
+			.nav-item
+				.nav-link
+					color: color-get($mau,main)
+
+	.k-responsive-menu
+		background: color-get($mau,main)
+		.navbar-brand
+			color: color-get($mau,trang)
+			img
+				max-height: 2rem
+		.nav
+			.nav-item
+				.nav-link
+					color: color-get($mau,duong-1)
+				&:hover, &.active, &.show
+					.nav-link
+						color: color-get($mau,trang)
+		.k-menu-bar
+			.k-button-toggle
+				color: color-get($mau,trang)
+
+	// CHANGE MENU
+
+	+media-breakpoint-up(lg)
+		.topbar
+			justify-content: flex-end
+			display: flex
+			+transition(.3s all ease-in-out)
+			.contactinfo,
+				display: flex
+				flex-direction: row
+				// padding: 0 .5rem
+				align-items: center
+				li 
+					color: darken(color-get($mau,trang),50%)
+					+ li 
+						margin-right: 0
+					a, .link
+						color: darken(color-get($mau,trang),50%)
+						+pad(.75rem .5rem)
+						&:hover
+							color: darken(color-get($mau,main),0%)
+						em 
+							width: 1rem
+							text-align: center
+		.k-responsive-menu
+			background: color-get($mau,trang)
+			padding-top: 0
+			padding-bottom: 0
+			position: relative
+			.navbar-brand
+				img 
+					max-height: 5.2rem
+					margin-left: 2rem
+					+transition(.3s all ease-in-out)
+			.nav-wrapper
+				background: color-get($mau,main)
+				.nav
+					justify-content: flex-start
+					padding: 1rem 0
+					.nav-item
+						+pad(0 2rem)
+						transform: skew(-20deg)
+						border-right: color-get($mau,duong-1) 1px solid
+						&:first-child
+							padding-left: 0
+						&:last-child
+							border-right: 0
+						.nav-link
+							color: color-get($mau,duong-1)
+							font-weight: 400
+							font-size: 0.938rem
+							transform: skew(20deg)
+						&:hover, &.active, &.show
+							.nav-link
+								color: color-get($mau,extra)
+						.dropdown-menu
+							.dropdown-item
+								color: lighten(color-get($mau,den),40%)
+								&:active 
+									color: color-get($mau,trang)
+			.mainnav
+				display: flex
+				flex-direction: column
+				.searchbar
+					overflow: hidden
+					display: flex
+					height: 35px
+					+pad(0)
+					margin-top: .5rem
+					justify-content: flex-end
+					+transition(.3s all ease-in-out)
+					.input-group
+						height: 35px
+						border: 1px solid lighten(color-get($mau,den),60%)
+						width: auto
+						overflow: hidden
+						input, button
+							+pad(.25rem .5rem)
+							color: lighten(color-get($mau,den),60%)
+		&.fixedheader
+			&.active
+				.topbar
+					height: 0px
+					overflow: hidden
+				.k-responsive-menu
+					.mainnav
+						.searchbar
+							height: 0px
+							margin-top: 0
+					.navbar-brand 
+						img
+							max-height: 2.5rem
+	+media-breakpoint-up(xl)
+		.k-responsive-menu
+			.navbar-brand
+				img 
+					max-height: 6.2rem
+					margin-left: 0rem
+			.nav
+				.nav-item
+					.nav-link
+						text-transform: uppercase
+		&.fixedheader
+			&.active
+				.k-responsive-menu
+					.navbar-brand 
+						img
+							max-height: 3.5rem
+	+media-breakpoint-down(md)
+		.contactinfo
+			font-size: 1.5rem
+			color: color-get($mau,duong-1)
+		.k-responsive-menu
+			.navbar-brand
+				margin: 0 auto 2rem
+				img 
+					max-height: 6.2rem
+			.nav 
+				.nav-item
+					font-size: 1.5rem
+					margin-bottom: 1rem
