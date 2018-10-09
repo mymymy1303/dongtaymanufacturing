@@ -7,6 +7,8 @@
 .dongtay-header
 	background: color-get($mau,trang)
 	box-shadow: 0 0 5px rgba(0,0,0,.5)
+	@media(max-width: 992px)
+		background: color-get($mau,duong-1)
 	&.fixedheader
 		position: fixed
 		top: 0
@@ -23,33 +25,25 @@
 		flex-wrap: wrap
 		li 
 			list-style: none
+			font-size: 1.25rem
 			a, .link
-				color: lighten(color-get($mau,main),30%)
+				color: color-get($mau,duong-1)
 				display: inline-block
 				text-decoration: none
 				+pad(0.5rem 1rem)
+				cursor: default
 			&:hover, &.active, &.show
 				a
 					color: color-get($mau,trang)
-	.searchbar
-		+pad(1rem)
-		color: lighten(color-get($mau,main),30%)
-		.input-group
-			width: 100%
-			input, button
-				+bor-rad(0)
-			button
-				background: darken(color-get($mau,trang),0%)
-				color: color-get($mau,main)
 	.k-menu-bar
 		color: color-get($mau,main)
 		.k-button-toggle
 			color: color-get($mau,main)
-		.navbar-brand
-			#logo
-				img
-					max-height: 3rem
-		.nav
+			font-size: 2rem
+		#logo
+			img
+				max-height: 3.2rem
+		ul
 			.nav-item
 				.nav-link
 					color: color-get($mau,main)
@@ -60,13 +54,10 @@
 			color: color-get($mau,trang)
 			img
 				max-height: 2rem
-		.nav
+		ul
 			.nav-item
 				.nav-link
 					color: color-get($mau,duong-1)
-				&:hover, &.active, &.show
-					.nav-link
-						color: color-get($mau,trang)
 		.k-menu-bar
 			.k-button-toggle
 				color: color-get($mau,trang)
@@ -88,13 +79,13 @@
 					+ li 
 						margin-right: 0
 					a, .link
-						color: darken(color-get($mau,trang),50%)
-						+pad(.75rem .5rem)
+						color: color-get($mau,xam-1)
+						+pad(.75rem .5rem .75rem 1rem)
+						font-size: 1rem
 						&:hover
 							color: darken(color-get($mau,main),0%)
-						em 
-							width: 1rem
-							text-align: center
+					i 
+						color: color-get($mau,duong-2)
 		.k-responsive-menu
 			background: color-get($mau,trang)
 			padding-top: 0
@@ -103,53 +94,47 @@
 			.navbar-brand
 				img 
 					max-height: 5.2rem
-					margin-left: 2rem
 					+transition(.3s all ease-in-out)
 			.nav-wrapper
 				background: color-get($mau,main)
-				.nav
-					justify-content: flex-start
+				ul
 					padding: 1rem 0
-					align-items: center
 					.nav-item
-						+pad(0 2rem)
+						+pad(0 1.5rem)
 						transform: skew(-20deg)
 						border-right: color-get($mau,duong-1) 1px solid
 						&:first-child
 							padding-left: 0
-						&:last-child,&:nth-last-child(2)
+						&:last-child
 							border-right: 0
 							padding-right: 0
-						&:last-child
-							transform: none
-							padding: 0 0 0 2.5rem
 						.nav-link
 							color: color-get($mau,duong-1)
 							font-weight: 400
 							font-size: 0.875rem
 							transform: skew(20deg)
 							line-height: 1.467
-						form
-							position: relative
-							button 
-								position: absolute
-								right: 0
-								background: transparent
-								border: 0
-								color: color-get($mau,xam-1)
-							input 
-								padding-right: 21px
-								color: color-get($mau,xam-1)
-								&::placeholder
-									color: color-get($mau,xam-1)
+						&:hover, &.active, &.show
+							.nav-link
+								color: color-get($mau,trang)
+								font-size: 1rem
+								transition: .3s all ease-in-out
+				form
+					position: relative
+					button 
+						position: absolute
+						right: 0
+						background: transparent
+						border: 0
+						color: color-get($mau,xam-1)
+					input 
+						padding-right: 21px
+						color: color-get($mau,xam-1)
+						&::placeholder
+							color: color-get($mau,xam-1)
 						&:hover, &.active, &.show
 							.nav-link
 								color: color-get($mau,extra)
-						.dropdown-menu
-							.dropdown-item
-								color: lighten(color-get($mau,den),40%)
-								&:active 
-									color: color-get($mau,trang)
 			.mainnav
 				display: flex
 				flex-direction: colum
@@ -170,7 +155,7 @@
 				img 
 					max-height: 6.2rem
 					margin-left: 0rem
-			.nav
+			ul
 				.nav-item
 					.nav-link
 						text-transform: uppercase
@@ -186,28 +171,28 @@
 			color: color-get($mau,duong-1)
 		.k-responsive-menu
 			.navbar-brand
-				margin: 0 auto 2rem
+				margin: 0 auto 1.5rem
 				img 
 					max-height: 6.2rem
-			.nav 
+			ul
 				.nav-item
 					font-size: 1.5rem
 					margin-bottom: 1rem
-					.form-inline
-						position: relative
-						button 
-							position: absolute
-							right: 0
-							background: transparent
-							border: 0
-							color: color-get($mau,xam-1)
-							i 
-								font-size: 1rem
-								line-height: 3rem
-						input 
-							width: 100%
-							padding-right: 21px
-							color: color-get($mau,xam-1)
-							height: 2.5rem
-							&::placeholder
-								color: color-get($mau,xam-1)
+			.form-inline
+				position: relative
+				button 
+					position: absolute
+					right: 0
+					background: transparent
+					border: 0
+					color: color-get($mau,xam-1)
+					i 
+						font-size: 1rem
+						line-height: 3rem
+				input 
+					width: 100%
+					padding-right: 21px
+					color: color-get($mau,xam-1)
+					height: 2.5rem
+					&::placeholder
+						color: color-get($mau,xam-1)
