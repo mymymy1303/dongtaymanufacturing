@@ -5,9 +5,18 @@
                 "header/h-dongtay"
             ],
             "body": [
+                "breadcrumb/b-4",
+                "map/m-2",
+                "form/f-3",
+                "boxes/b-recruitment",
+                "slider/s-facilities",
+                "boxes/b-home",
+                "boxes/b-quality",
+                "boxes/b-quality-ct",
+                "boxes/b-project-ct
                 "title/t-projects",
                 "breadcrumb/b-service-ct",
-                "card/c-service"
+                "card/c-service
             ],
             "footer": [
                 "footer/f-5"
