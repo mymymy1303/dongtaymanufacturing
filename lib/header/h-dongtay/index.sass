@@ -7,8 +7,6 @@
 .dongtay-header
 	background: color-get($mau,trang)
 	box-shadow: 0 0 5px rgba(0,0,0,.5)
-	@media(max-width: 992px)
-		background: color-get($mau,duong-1)
 	&.fixedheader
 		position: fixed
 		top: 0
@@ -100,7 +98,7 @@
 				ul
 					padding: 1rem 0
 					.nav-item
-						+pad(0 1.5rem)
+						+pad(0 1rem)
 						transform: skew(-20deg)
 						border-right: color-get($mau,duong-1) 1px solid
 						&:first-child
@@ -114,11 +112,12 @@
 							font-size: 0.875rem
 							transform: skew(20deg)
 							line-height: 1.467
-						&:hover, &.active, &.show
+							+transition(.3s ease-in-out)
+							text-transform: uppercase
+						&:hover, &.active, &.show, &:active, &:focus
 							.nav-link
 								color: color-get($mau,trang)
 								font-size: 1rem
-								transition: .3s all ease-in-out
 				form
 					position: relative
 					button 
@@ -155,10 +154,12 @@
 				img 
 					max-height: 6.2rem
 					margin-left: 0rem
-			ul
-				.nav-item
-					.nav-link
-						text-transform: uppercase
+			.nav-wrapper
+				ul
+					.nav-item
+						+pad(0 1.5rem)
+						.nav-link
+							text-transform: uppercase
 		&.fixedheader
 			&.active
 				.k-responsive-menu

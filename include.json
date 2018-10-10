@@ -13,10 +13,21 @@
                 "boxes/b-home",
                 "boxes/b-quality",
                 "boxes/b-quality-ct",
-                "boxes/b-project-ct"
+                "boxes/b-project-ct
+                "title/t-projects",
+                "breadcrumb/b-service-ct",
+                "card/c-service
             ],
             "footer": [
                 "footer/f-5"
+            ]
+        },
+        "projects": {
+            "body": [
+                "title/t-projects",
+                "breadcrumb/b-service-ct",
+                "news/n-projects",
+                "pagination/p-3"
             ]
         }
     }
