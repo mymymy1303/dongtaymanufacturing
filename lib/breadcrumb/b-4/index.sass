@@ -5,6 +5,7 @@
 
 .canhcam-breadcrumb-4
 	+pad(2rem 0)
+	background-color: blue
 	.main-breadcrumb
 		width: 100%
 		display: none
@@ -17,18 +18,33 @@
 			position: relative
 			background: none
 			.breadcrumb-item
-				+pad(.5rem)
+				+fz(.875rem)
 				position: relative
 				line-height: 1.5rem
-				color: darken(color-get($mau,trang),50%)
+				color: darken(color-get($mau,trang),0%)
 				display: flex
 				align-items: center
 				a
-					color: color-get($mau,main)
+					color: color-get($mau,trang)
+					+fz(.875rem)
+					text-decoration: none
+					+transition(.3s ease-in-out)
+					&:hover, &:active, &:focus
+						color: color-get($mau, main)
+					&:hover
+						+fw(700)
 				+ .breadcrumb-item
 					&:before
 						color: color-get($mau,main)
-						content: '\e876'
-						font-family: 'Linearicons-Free'
-						line-height: 1
+						background-color: color-get($mau, trang)
+						content: '\f105'
+						font-family: 'FontAwesome'
+						+size(1rem, 1rem)
+						line-height: 1rem
+						text-align: center
 						overflow: hidden
+						+pad(0)
+						+fz(.875rem)
+						+fw(700)
+						+mar(0 .5rem 0 0)
+						+bor-rad(50%)
