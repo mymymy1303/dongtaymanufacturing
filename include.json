@@ -7,10 +7,18 @@
             "body": [
                 "title/t-projects",
                 "breadcrumb/b-service-ct",
-                "news/n-projects"
+                "card/c-service"
             ],
             "footer": [
                 "footer/f-5"
+            ]
+        },
+        "projects": {
+            "body": [
+                "title/t-projects",
+                "breadcrumb/b-service-ct",
+                "news/n-projects",
+                "pagination/p-3"
             ]
         }
     }
