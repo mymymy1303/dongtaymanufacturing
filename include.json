@@ -9,7 +9,8 @@
                 "map/m-2",
                 "form/f-3",
                 "boxes/b-recruitment",
-                "slider/s-facilities"
+                "slider/s-facilities",
+                "boxes/b-home"
             ],
             "footer": [
                 "footer/f-5"
