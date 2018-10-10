@@ -1,0 +1,53 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+	
+	
+.facilities-slider
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.slider-fac
+		max-width: 810px
+		background-color: color-get($mau,main)
+		padding: 1.5rem
+		max-height: 491px
+		@media(max-width: 576px)
+			padding: 0 1.5rem 1.5rem
+		.item
+			.img-block
+				max-height: 456px
+				overflow: hidden
+				img 
+					margin: 0 auto
+	.slider-nav
+		max-width: 241px
+		overflow: hidden
+		background-color: color-get($mau,main)
+		padding: 0 1rem
+		max-height: 491px
+		@media(max-width: 576px)
+			min-width: 100%
+		.item
+			overflow: hidden
+			.img-block
+				max-height: 136px
+				overflow: hidden
+				img 
+		.slick-prev
+			display: none
+		.slick-next
+			width: 0
+			height: 0
+			z-index: 1
+			border-style: solid
+			border-width: 11px 44.5px 0 44.5px
+			border-color: #ffffff transparent transparent transparent
+			top: 96%
+			left: 50%
+			transform: translateX(-50%)
+			&:before
+				content: ' '
+			@media(max-width: 767px)
+				top: 94.5%
