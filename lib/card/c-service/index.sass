@@ -1,0 +1,138 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+main
+	background-image: url('./../img/dongtay/_global/services_bg.png')
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+
+.canhcam-card-service
+	+media-breakpoint-up(xl)
+		+pad(0 0 1.05rem 0)
+	.canhcam-card-group
+		display: flex
+		+size(100%, 100%)
+		flex-direction: column
+		overflow: hidden
+		align-items: center
+		.canhcam-card
+			display: flex
+			flex-direction: column
+			word-wrap: break-word
+			margin-bottom: 3rem
+			text-decoration: none
+			background-color: color-get($mau, trang)
+			width: 16rem
+			&:hover, &:active, &:focus
+				.canhcam-card-body
+					background-color: color-get($mau, main)
+					.canhcam-card-title, .canhcam-card-text
+						color: color-get($mau, trang)
+			.canhcam-card-img
+				margin-bottom: 0
+				+pos(relative, null)
+				overflow: hidden
+				+size(100%, 15rem)
+				img
+					+pos(abs, 50% null null 50%)
+					+transform(translateX(-50%) translateY(-50%))
+			.canhcam-card-body
+				flex: 1 1 auto
+				+pad(1.25rem)
+				+transition(.3s ease-in-out)
+				.canhcam-card-title
+					+fz(1.125rem)
+					+fw(400)
+					margin-bottom: 0
+					+pad(0 0 .5rem 0)
+					text-transform: uppercase
+					color: color-get($mau, main-extra)
+					+pos(relative, null)
+					&:before
+						+pos(abs, null null 0 0)
+						content: ''
+						+size(3rem, 2px)
+						background-color: color-get($mau, main-extra)
+				.canhcam-card-text
+					+fz(.875rem)
+					+fw(400)
+					margin-bottom: 0
+					margin-top: 1rem
+		+media-breakpoint-up(sm)
+			.canhcam-card.canhcam-side-panel
+				flex-direction: column
+				.canhcam-card-body
+					flex: 0 0 100%
+					max-width: 100%
+			.canhcam-card
+				width: 100%
+				flex-direction: row-reverse
+				&:nth-child(2n)
+					flex-direction: row
+				.canhcam-card-img
+					flex: 0 0 50%
+					max-width: 50%
+				.canhcam-card-body
+					flex: 0 0 50%
+					max-width: 50%
+		+media-breakpoint-up(lg)
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: center
+			.canhcam-card
+				width: 16.5rem
+				flex: 0 0 auto
+				margin-bottom: 3rem
+				flex-direction: column-reverse
+				margin-left: auto
+				margin-right: auto
+				&:nth-child(2n)
+					flex-direction: column
+				.canhcam-card-img
+					flex: initial
+					max-width: 100%
+				.canhcam-card-body
+					flex: initial
+					max-width: 100%
+					height: 15rem
+					position: relative
+					overflow: hidden
+					p
+					line-height: 1.55rem
+		+media-breakpoint-up(xl)
+			.canhcam-card
+				margin-bottom: .95rem
+
+	.side-panel
+		background-color: color-get($mau, main)
+		color: color-get($mau, trang)
+		+pad(1.25rem)
+		+mar(0 0 3rem 0)
+		width: 16rem
+		margin-left: auto
+		margin-right: auto
+		h2
+			font-family: 'Open Sans'
+			+fz(2.875rem)
+			margin-bottom: 0
+			+fw(300)
+			text-transform: uppercase
+			span
+				+fw(700)
+			margin-bottom: 2.5rem
+		p
+			+fz(.875rem)
+			+fw(400)
+			margin-bottom: 0
+		+media-breakpoint-up(sm)
+			width: 100%
+		+media-breakpoint-up(lg)
+			width: 16.5rem
+			height: calc(100% - 3rem)
+			margin-left: auto
+			margin-right: auto
+		+media-breakpoint-up(xl)
+			height: calc(100% - .95rem)

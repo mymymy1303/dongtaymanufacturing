@@ -5,9 +5,9 @@
                 "header/h-dongtay"
             ],
             "body": [
+                "title/t-service",
                 "breadcrumb/b-4",
-                "map/m-2",
-                "form/f-3"
+                "card/c-service"
             ],
             "footer": [
                 "footer/f-5"
