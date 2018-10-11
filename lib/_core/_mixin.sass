@@ -22,3 +22,15 @@
 			background-color: #{$hover}
 		&:active, &:focus , &.active, &.activated
 			background-color: #{$active}
+
+=text-clamp($lines, $line-height: false)
+	overflow: hidden
+	text-overflow: ellipsis
+	display: -webkit-box
+	-webkit-box-orient: vertical
+	-webkit-line-clamp: $lines
+
+	// Fallback for non-Webkit browsers
+	// (won't show `…` at the end of the block)
+	@if $line-height
+		max-height: $line-height * $lines
