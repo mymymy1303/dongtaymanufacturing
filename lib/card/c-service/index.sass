@@ -4,11 +4,10 @@
 //////////////////////////////////////
 
 .canhcam-card-service
-	main
-		background-image: url('./../img/dongtay/_global/services_bg.png')
-		background-size: cover
-		background-position: center center
-		background-repeat: no-repeat
+	background-image: url('./../img/dongtay/_global/services_bg.png')
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
 	+media-breakpoint-up(xl)
 		+pad(0 0 1.05rem 0)
 	.canhcam-card-group
@@ -127,7 +126,9 @@
 			+fw(400)
 			margin-bottom: 0
 		+media-breakpoint-up(sm)
-			width: 100%
+			+size(100%, 15rem)
+		+media-breakpoint-up(md)
+			+size(100%, 15rem)
 		+media-breakpoint-up(lg)
 			width: 16.5rem
 			height: calc(100% - 3rem)

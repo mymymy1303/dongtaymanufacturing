@@ -5,8 +5,8 @@
                 "header/h-dongtay"
             ],
             "body": [
-                "title/t-projects",
-                "breadcrumb/b-service-ct",
+                "title/t-1",
+                "breadcrumb/b-1",
                 "card/c-service"
             ],
             "footer": [
@@ -15,7 +15,6 @@
         },
         "projects": {
             "body": [
-                "title/t-projects",
                 "breadcrumb/b-service-ct",
                 "news/n-projects",
                 "pagination/p-3"
