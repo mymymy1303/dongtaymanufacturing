@@ -1,15 +1,14 @@
 extends _layout/layout.pug
 block variables
-	- var title = "projects"
-	- var description = "Description for projects page"
-	- var bodyclass = "projects"
-	- var href = "/projects.html"
+	- var title = "recruitment"
+	- var description = "Description for recruitment page"
+	- var bodyclass = "recruitment"
+	- var href = "/recruitment.html"
 block header
 	include ../lib/header/h-dongtay/index.pug
 block body
 	include ../lib/title/t-1/index.pug
 	include ../lib/breadcrumb/b-1/index.pug
-	include ../lib/news/n-projects/index.pug
-	include ../lib/pagination/p-3/index.pug
+	include ../lib/boxes/b-recruitment/index.pug
 block footer
 	include ../lib/footer/f-5/index.pug
